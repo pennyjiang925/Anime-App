@@ -2,16 +2,24 @@ import Google from '../assets/google.png';
 import Facebook from '../assets/facebook.png';
 
 const Login = () => {
+  const google = () => {
+    window.open('http://localhost:5000/auth/google', '_self');
+  };
+
+  const facebook = () => {
+    window.open('http://localhost:5000/auth/facebook', '_self');
+  };
+
   return (
     <div className="login">
       <h1 className="loginTitle">Login with</h1>
       <div className="wrapper">
         <div className="left">
-          <div className="loginButton google">
+          <div className="loginButton google" onClick={google}>
             <img src={Google} alt="" className="icon" />
             Google
           </div>
-          <div className="loginButton facebook">
+          <div className="loginButton facebook" onClick={facebook}>
             <img src={Facebook} alt="" className="icon" />
             Facebook
           </div>
